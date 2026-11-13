@@ -1,0 +1,414 @@
+
+/* =====================================================
+   PEACE — ANIMATIONS
+   Elegant, Soft & Vintage Motion
+===================================================== */
+
+
+/* =====================================================
+   1. GENERAL ANIMATION SETTINGS
+===================================================== */
+
+.cover-screen,
+.password-screen,
+.book-screen {
+    animation: screen-appear 0.8s ease both;
+}
+
+button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =====================================================
+   2. SCREEN ENTRANCE
+===================================================== */
+
+@keyframes screen-appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =====================================================
+   3. COVER ENTRANCE
+===================================================== */
+
+.cover-book {
+    animation: cover-arrive 1.1s ease both;
+}
+
+@keyframes cover-arrive {
+    from {
+        opacity: 0;
+        transform: perspective(1200px) rotateY(-12deg)
+                   translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: perspective(1200px) rotateY(-3deg)
+                   translateY(0);
+    }
+}
+
+.cover-flower {
+    animation: flower-gentle 4s ease-in-out infinite;
+}
+
+@keyframes flower-gentle {
+    0%, 100% {
+        transform: rotate(-5deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(5deg) scale(1.06);
+    }
+}
+
+
+/* =====================================================
+   4. FLOATING DECORATIONS
+===================================================== */
+
+.cover-decoration-top {
+    animation: float-decoration 7s ease-in-out infinite;
+}
+
+.cover-decoration-bottom {
+    animation: float-decoration 9s ease-in-out infinite reverse;
+}
+
+@keyframes float-decoration {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(8deg);
+    }
+}
+
+
+/* =====================================================
+   5. BUTTON INTERACTIONS
+===================================================== */
+
+.open-book-button,
+.password-submit-button,
+.page-navigation-button,
+.toolbar-button {
+    transition:
+        background 0.35s ease,
+        color 0.35s ease,
+        border-color 0.35s ease,
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.open-book-button:active,
+.password-submit-button:active,
+.page-navigation-button:active:not(:disabled) {
+    transform: scale(0.97);
+}
+
+
+/* =====================================================
+   6. PAGE CONTENT REVEAL
+===================================================== */
+
+.page-reveal {
+    animation: page-content-reveal 0.55s ease both;
+}
+
+@keyframes page-content-reveal {
+    from {
+        opacity: 0.45;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   7. QUOTE CARD APPEARANCE
+===================================================== */
+
+.quote-card {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.quote-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 18px rgba(65, 45, 28, 0.10);
+}
+
+
+/* =====================================================
+   8. PHOTO PLACEHOLDER EFFECT
+===================================================== */
+
+.photo-placeholder {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.photo-placeholder:hover {
+    transform: translateY(-4px) rotate(-1deg);
+
+    box-shadow:
+        0 9px 20px rgba(65, 45, 28, 0.15);
+}
+
+
+/* =====================================================
+   9. VIDEO OPEN/CLOSE EFFECT
+===================================================== */
+
+.video-placeholder {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.video-placeholder:hover {
+    transform: scale(1.015);
+
+    box-shadow:
+        0 8px 18px rgba(65, 45, 28, 0.12);
+}
+
+.video-viewer {
+    animation: video-viewer-open 0.35s ease both;
+}
+
+.video-viewer.closing {
+    animation: video-viewer-close 0.3s ease both;
+}
+
+@keyframes video-viewer-open {
+    from {
+        opacity: 0;
+        transform: scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes video-viewer-close {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.94);
+    }
+}
+
+
+/* =====================================================
+   10. VOICE NOTE INTERACTION
+===================================================== */
+
+.voice-placeholder {
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.voice-placeholder:hover {
+    background: #f8f0e4;
+    border-color: var(--gold);
+}
+
+
+/* =====================================================
+   11. SECRET ENVELOPE ANIMATION
+===================================================== */
+
+.secret-envelope {
+    transition: transform 0.35s ease;
+}
+
+.secret-envelope:hover {
+    transform: translateY(-4px);
+}
+
+.secret-envelope.open .envelope-flap {
+    transform: rotateX(180deg);
+    transition: transform 0.7s ease;
+}
+
+.secret-envelope.open {
+    animation: envelope-open 0.7s ease;
+}
+
+@keyframes envelope-open {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-9px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.secret-letter {
+    animation: letter-reveal 0.7s ease both;
+}
+
+@keyframes letter-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   12. MUSIC PLAYER
+===================================================== */
+
+.music-icon {
+    transition: transform 0.3s ease;
+}
+
+.music-player.playing .music-icon {
+    animation: music-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes music-pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+
+/* =====================================================
+   13. BOOKMARK FEEDBACK
+===================================================== */
+
+.bookmarked {
+    animation: bookmark-pop 0.4s ease;
+}
+
+@keyframes bookmark-pop {
+    0% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.12);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* =====================================================
+   14. CONTENTS PANEL
+===================================================== */
+
+.contents-panel {
+    animation: contents-enter 0.35s ease both;
+}
+
+@keyframes contents-enter {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* =====================================================
+   15. PASSWORD ERROR
+===================================================== */
+
+.password-error:not([hidden]) {
+    animation: error-appear 0.3s ease both;
+}
+
+@keyframes error-appear {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   16. LOADING FLOWER
+===================================================== */
+
+@keyframes flower-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =====================================================
+   17. ACCESSIBILITY
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}

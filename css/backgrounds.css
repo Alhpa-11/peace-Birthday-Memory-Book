@@ -1,0 +1,125 @@
+
+/* =========================================
+   PEACE MEMORY BOOK
+   VINTAGE BACKGROUNDS AND PAPER TEXTURES
+========================================= */
+
+/* OUTER VINTAGE BACKGROUND */
+
+body {
+    background:
+        radial-gradient(ellipse at 15% 15%, rgba(194, 151, 100, 0.22), transparent 35%),
+        radial-gradient(ellipse at 85% 85%, rgba(194, 151, 100, 0.18), transparent 35%),
+        linear-gradient(135deg, #493326, #281d18 55%, #493326);
+}
+
+/* DECORATIVE OUTER CORNERS */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.28;
+    background:
+        radial-gradient(circle at 5% 8%, transparent 0 35px, #c69b68 36px 37px, transparent 38px),
+        radial-gradient(circle at 95% 8%, transparent 0 35px, #c69b68 36px 37px, transparent 38px),
+        radial-gradient(circle at 5% 92%, transparent 0 35px, #c69b68 36px 37px, transparent 38px),
+        radial-gradient(circle at 95% 92%, transparent 0 35px, #c69b68 36px 37px, transparent 38px);
+}
+
+/* BOOK SCREEN BACKGROUND */
+
+.book-screen {
+    background:
+        radial-gradient(ellipse at top left, rgba(202, 164, 116, 0.20), transparent 40%),
+        radial-gradient(ellipse at bottom right, rgba(202, 164, 116, 0.16), transparent 40%);
+
+    background-color: #e8d9c2;
+}
+
+/* BOOK STAGE */
+
+.book-stage {
+    background: transparent;
+}
+
+/* VINTAGE PAPER FOR EVERY PAGE */
+
+.page {
+    background-color: #f8f0e3;
+    background-image:
+        radial-gradient(ellipse at 8% 8%, rgba(183, 139, 88, 0.12), transparent 35%),
+        radial-gradient(ellipse at 92% 92%, rgba(183, 139, 88, 0.10), transparent 35%),
+        repeating-linear-gradient(
+            0deg,
+            rgba(120, 85, 50, 0.018) 0px,
+            rgba(120, 85, 50, 0.018) 1px,
+            transparent 1px,
+            transparent 4px
+        ),
+        linear-gradient(135deg, #fffaf0, #f1e4d0);
+}
+
+/* PAPER EDGES */
+
+.page-content {
+    background:
+        radial-gradient(circle at 0% 0%, rgba(191, 151, 101, 0.09), transparent 28%),
+        radial-gradient(circle at 100% 100%, rgba(191, 151, 101, 0.08), transparent 28%);
+}
+
+/* DELICATE GOLDEN CORNER DECORATIONS */
+
+.page::before {
+    content: "❀";
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    color: rgba(171, 126, 72, 0.42);
+    font-size: 25px;
+    pointer-events: none;
+}
+
+.page::after {
+    content: "✿";
+    position: absolute;
+    right: 15px;
+    bottom: 12px;
+    color: rgba(171, 126, 72, 0.38);
+    font-size: 23px;
+    pointer-events: none;
+}
+
+/* CLOSING PAGE */
+
+.closing-page {
+    background:
+        radial-gradient(circle at 50% 15%, rgba(218, 184, 133, 0.25), transparent 38%),
+        linear-gradient(145deg, #704c37, #39251c);
+}
+
+/* SMALL SCREEN BACKGROUND ADJUSTMENTS */
+
+@media (max-width: 768px) {
+    body {
+        background:
+            radial-gradient(ellipse at top, rgba(194, 151, 100, 0.16), transparent 55%),
+            linear-gradient(145deg, #493326, #281d18);
+    }
+
+    .page::before {
+        font-size: 19px;
+    }
+
+    .page::after {
+        font-size: 18px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body {
+        scroll-behavior: auto;
+    }
+}

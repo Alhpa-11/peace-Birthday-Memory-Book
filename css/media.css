@@ -1,0 +1,569 @@
+
+/* =========================================
+   PEACE MEMORY BOOK
+   COMPLETE RESPONSIVE DESIGN
+========================================= */
+
+/* GLOBAL FOUNDATION */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-width: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+img,
+video,
+canvas,
+svg,
+iframe {
+    max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+    max-width: 100%;
+}
+
+button {
+    touch-action: manipulation;
+}
+
+.page-content,
+.page-content * {
+    overflow-wrap: break-word;
+}
+
+/* LARGE DESKTOP */
+
+@media (min-width: 1400px) {
+    .book-screen {
+        padding: 35px;
+    }
+
+    .book-stage {
+        max-width: 1200px;
+        margin: 25px auto;
+    }
+
+    .cover-book {
+        width: min(480px, 90vw);
+    }
+
+    .page-content {
+        padding: 40px;
+    }
+}
+
+/* LAPTOPS */
+
+@media (max-width: 1399px) and (min-width: 769px) {
+    .book-screen {
+        padding: 22px;
+    }
+
+    .book-stage {
+        width: 100%;
+        max-width: 1050px;
+    }
+
+    .book-wrapper {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cover-book {
+        width: min(440px, 85vw);
+    }
+
+    .page-content {
+        padding: 28px;
+    }
+}
+
+/* TABLETS */
+
+@media (max-width: 768px) {
+    .cover-screen {
+        padding: 20px;
+    }
+
+    .cover-book {
+        width: min(400px, 90vw);
+        min-height: 500px;
+    }
+
+    .cover-title {
+        font-size: clamp(2rem, 7vw, 3.2rem);
+    }
+
+    .book-screen {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .book-toolbar {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .toolbar-button {
+        min-height: 40px;
+        padding: 9px 13px;
+        font-size: 0.8rem;
+    }
+
+    .book-stage,
+    .book-wrapper {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .book-stage {
+        margin: 8px auto;
+    }
+
+    .page-content {
+        min-width: 0;
+        padding: clamp(16px, 3vw, 26px);
+    }
+
+    .letter-text {
+        font-size: 0.9rem;
+        line-height: 1.8;
+    }
+
+    .quote-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .photo-gallery,
+    .video-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .music-player {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .music-information {
+        width: 100%;
+        text-align: center;
+    }
+
+    .music-controls {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .voice-list {
+        width: 100%;
+    }
+
+    .voice-placeholder {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .voice-player {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .voice-progress {
+        min-width: 0;
+        flex: 1;
+    }
+}
+
+/* MOBILE PHONES */
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .cover-screen {
+        padding: 12px;
+    }
+
+    .cover-book {
+        width: min(420px, 94vw);
+        min-height: min(500px, 80vh);
+        padding: 24px 16px;
+    }
+
+    .cover-title {
+        font-size: clamp(1.9rem, 9vw, 2.8rem);
+    }
+
+    .cover-subtitle {
+        font-size: 0.82rem;
+    }
+
+    .open-book-button {
+        min-height: 44px;
+        padding: 12px 20px;
+        font-size: 0.85rem;
+    }
+
+    .password-screen {
+        padding: 16px;
+    }
+
+    .password-card {
+        width: 100%;
+        max-width: 380px;
+        padding: 24px 18px;
+    }
+
+    .password-card h1 {
+        font-size: 1.6rem;
+    }
+
+    /* MOBILE BOOK SCREEN */
+
+    .book-screen {
+        height: 100vh;
+        height: 100dvh;
+        min-height: 0;
+
+        padding: 6px 8px 10px;
+        gap: 5px;
+
+        overflow: hidden;
+    }
+
+    .book-toolbar {
+        flex: 0 0 auto;
+        justify-content: space-between;
+        gap: 5px;
+        padding: 5px 0;
+    }
+
+    .toolbar-brand {
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
+
+    .toolbar-button {
+        min-height: 38px;
+        padding: 7px 9px;
+        font-size: 0.7rem;
+    }
+
+    .page-progress-container {
+        flex: 0 0 auto;
+        width: 100%;
+        margin: 7px 0;
+        gap: 8px;
+    }
+
+    .page-progress-label {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .page-counter {
+        font-size: 11px;
+    }
+
+    /* Give the book only the remaining screen height. */
+
+    .book-stage {
+        flex: 1 1 0;
+        min-height: 0;
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        overflow: hidden;
+    }
+
+    .book-wrapper,
+    .stf__parent {
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0 auto;
+    }
+
+    .page-content {
+        min-width: 0;
+        padding: 12px;
+    }
+
+    .page-title {
+        font-size: clamp(1.1rem, 5vw, 1.4rem);
+    }
+
+    .letter-text {
+        font-size: 0.8rem;
+        line-height: 1.7;
+    }
+
+    .quote-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .photo-placeholder {
+        min-width: 0;
+        padding: 8px;
+    }
+
+    .video-gallery {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .voice-list {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .voice-placeholder {
+        width: 100%;
+        min-width: 0;
+        padding: 10px;
+    }
+
+    .voice-player {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .voice-play-button {
+        min-height: 40px;
+        flex-shrink: 0;
+    }
+
+    .voice-progress {
+        min-width: 0;
+        flex: 1;
+    }
+
+    .voice-time {
+        font-size: 0.75rem;
+    }
+
+    .secret-envelope {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Keep music controls compact. */
+
+    .music-player {
+        flex: 0 0 auto;
+        width: 100%;
+        margin-top: 5px;
+        padding: 7px;
+        gap: 6px;
+    }
+
+    .music-information {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .music-controls {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    #music-volume {
+        max-width: 100px;
+    }
+
+    /* Navigation stays within the available screen. */
+
+    .book-navigation {
+        flex: 0 0 auto;
+        width: 100%;
+        margin-top: 5px;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .page-navigation-button {
+        min-height: 38px;
+        padding: 7px 11px;
+        font-size: 0.75rem;
+    }
+
+    .navigation-caption {
+        font-size: 11px;
+    }
+
+    .contents-panel {
+        width: min(92vw, 340px);
+        max-width: 100%;
+    }
+
+    .video-viewer {
+        padding: 12px;
+    }
+
+    .video-viewer-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 12px;
+    }
+
+    .video-viewer-player {
+        display: block;
+        width: 100%;
+        max-height: 65vh;
+        height: auto;
+    }
+
+    .video-close-button {
+        min-width: 40px;
+        min-height: 40px;
+    }
+}
+
+/* VERY SMALL PHONES */
+
+@media (max-width: 360px) {
+    .cover-book {
+        min-height: 420px;
+    }
+
+    .cover-title {
+        font-size: 1.8rem;
+    }
+
+    .toolbar-button {
+        padding: 6px 7px;
+        font-size: 0.62rem;
+    }
+
+    .toolbar-brand {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+    .page-content {
+        padding: 9px;
+    }
+
+    .page-title {
+        font-size: 1.05rem;
+    }
+
+    .letter-text {
+        font-size: 0.73rem;
+    }
+
+    .photo-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .music-controls {
+        gap: 5px;
+    }
+
+    .voice-player {
+        gap: 6px;
+    }
+
+    .page-navigation-button {
+        min-width: 0;
+        padding: 7px 9px;
+    }
+}
+
+/* LANDSCAPE PHONES */
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .cover-book {
+        min-height: 320px;
+        padding: 16px;
+    }
+
+    .cover-title {
+        font-size: 2rem;
+    }
+
+    .book-screen {
+        height: 100vh;
+        height: 100dvh;
+        min-height: 0;
+        padding: 4px 8px;
+        gap: 3px;
+    }
+
+    .book-toolbar {
+        padding: 3px 0;
+    }
+
+    .page-progress-container {
+        margin: 3px 0;
+    }
+
+    .book-stage {
+        flex: 1 1 0;
+        min-height: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .music-player {
+        margin-top: 3px;
+        padding: 5px;
+    }
+
+    .book-navigation {
+        margin-top: 3px;
+    }
+
+    .video-viewer-player {
+        max-height: 75vh;
+    }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

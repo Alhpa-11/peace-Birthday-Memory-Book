@@ -1,0 +1,893 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PEACE | A Birthday Memory Book</title>
+    <meta name="description" content="A little book filled with words, memories and moments to treasure.">
+
+    <!-- WEBSITE STYLES: EACH FILE IS LINKED ONCE -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/book.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/backgrounds.css">
+</head>
+
+<body>
+
+    <!-- LOADING SCREEN -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loading-content">
+            <span class="loading-flower">✿</span>
+            <p>Preparing something special...</p>
+        </div>
+    </div>
+
+    <!-- BIRTHDAY COVER -->
+    <section class="cover-screen" id="cover-screen">
+
+        <div class="cover-decoration cover-decoration-top">✿</div>
+        <div class="cover-decoration cover-decoration-bottom">❀</div>
+
+        <div class="cover-book">
+            <div class="cover-border">
+
+                <p class="cover-small-text">A SPECIAL COLLECTION OF MEMORIES</p>
+                <div class="cover-flower">❀</div>
+
+                <h1 class="cover-title">Happy Birthday</h1>
+                <h2 class="cover-name">Taiwo</h2>
+
+                <div class="cover-divider"><span>✦</span></div>
+
+                <p class="cover-description">
+                    A little book filled with words,
+                    memories and moments to treasure.
+                </p>
+
+                <button class="open-book-button" id="open-gift-button">
+                    Open Your Gift <span>→</span>
+                </button>
+
+                <p class="cover-footer">Made with care, just for you</p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PASSWORD SCREEN -->
+    <section class="password-screen" id="password-screen" hidden>
+
+        <div class="password-card">
+
+            <div class="password-decoration">✿</div>
+            <p class="password-eyebrow">A LITTLE SECRET</p>
+            <h2>Before You Enter...</h2>
+
+            <p class="password-description">
+                This little book has a special key.
+                Enter the secret word to discover what is inside.
+            </p>
+
+            <form id="password-form">
+
+                <label for="book-password">Secret password</label>
+
+                <input
+                    type="password"
+                    id="book-password"
+                    name="password"
+                    placeholder="Enter the secret word"
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit" class="password-submit-button">
+                    Unlock My Book <span>→</span>
+                </button>
+
+                <p class="password-error" id="password-error" role="alert" hidden>
+                    That isn't the correct password. Please try again.
+                </p>
+
+            </form>
+
+            <p class="password-hint">
+                A little hint:
+                <span><!-- ADD YOUR PASSWORD HINT HERE LATER --></span>
+            </p>
+
+            <button class="back-to-cover" id="back-to-cover-button">
+                ← Back to the cover
+            </button>
+
+        </div>
+    </section>
+
+    <!-- MAIN MEMORY BOOK -->
+    <main class="book-screen" id="book-screen" hidden>
+
+        <!-- BOOK TOOLBAR -->
+        <header class="book-toolbar">
+
+            <button id="contents-button" class="toolbar-button">
+                ☰ Contents
+            </button>
+
+            <div class="toolbar-brand">PEACE</div>
+
+            <button id="bookmark-button" class="toolbar-button">
+                ♡ Bookmark
+            </button>
+
+        </header>
+
+        <!-- PAGE PROGRESS -->
+        <div class="page-progress-container">
+
+            <span class="page-progress-label">YOUR MEMORIES</span>
+
+            <div class="page-progress-bar">
+                <div class="page-progress-fill" id="progress-fill"></div>
+            </div>
+
+            <span class="page-counter">
+                <span id="current-page">1</span>
+                /
+                <span id="total-pages">16</span>
+            </span>
+
+        </div>
+
+        <!-- BOOK PAGES -->
+        <div class="book-stage">
+            <div class="book-wrapper" id="book">
+
+                <!-- PAGE 1: INTRODUCTION -->
+                <div class="page page-cover" data-density="hard">
+                    <div class="page-content intro-page">
+
+                        <span class="page-flower">❀</span>
+                        <p class="page-eyebrow">A BOOK FOR YOU</p>
+
+                        <h2>For You,<br>Taiwo</h2>
+
+                        <div class="page-ornament">✦ ❀ ✦</div>
+
+                        <p>
+                            Some people make ordinary moments
+                            feel a little more special.
+                        </p>
+
+                        <p>
+                            This little book is a collection
+                            of words, memories and moments
+                            created especially for you.
+                        </p>
+
+                        <span class="page-number">01</span>
+                    </div>
+                </div>
+
+                <!-- PAGE 2: BIRTHDAY LETTER -->
+                <div class="page">
+                    <div class="page-content letter-page">
+
+                        <p class="page-eyebrow">A LETTER FROM THE HEART</p>
+                        <h2>Happy Birthday</h2>
+                        <div class="page-ornament">❀</div>
+
+                        <div class="letter-text">
+
+                            <p>Dear Taiwo,</p>
+
+                            <p>
+                                Today is a special day because it
+                                celebrates someone whose presence
+                                deserves to be appreciated.
+                            </p>
+
+                            <p>
+                                I hope this new chapter brings you
+                                beautiful opportunities, genuine
+                                happiness, wonderful memories and
+                                countless reasons to smile.
+                            </p>
+
+                            <p>
+                                Never forget how valuable you are
+                                and how much the little things you
+                                do can mean to the people around you.
+                            </p>
+
+                            <p>
+                                May your dreams continue to grow,
+                                your journey become brighter and
+                                your days be filled with good things.
+                            </p>
+
+                            <p>Happy Birthday, Taiwo.</p>
+
+                            <p class="letter-signature">
+                                With warm wishes ♡
+                            </p>
+
+                        </div>
+
+                        <span class="page-number">02</span>
+                    </div>
+                </div>
+
+                <!-- PAGE 3: QUOTES -->
+                <div class="page">
+                    <div class="page-content quotes-page">
+
+                        <p class="page-eyebrow">A FEW BEAUTIFUL WORDS</p>
+                        <h2>Little Reminders</h2>
+
+                        <div class="quote-card">
+                            <span>❝</span>
+                            <p>
+                                May you always find reasons
+                                to believe in beautiful things.
+                            </p>
+                        </div>
+
+                        <div class="quote-card">
+                            <span>❝</span>
+                            <p>
+                                Your story is still unfolding.
+                                Give every new chapter a chance.
+                            </p>
+                        </div>
+
+                        <div class="quote-card">
+                            <span>❝</span>
+                            <p>
+                                The little moments often become
+                                the memories we treasure most.
+                            </p>
+                        </div>
+
+                        <span class="page-number">03</span>
+                    </div>
+                </div>
+
+                <!-- PAGE 4: PICTURES 1–5 -->
+                <div class="page">
+                    <div class="page-content memories-page">
+
+                        <p class="page-eyebrow">A COLLECTION OF MOMENTS</p>
+                        <h2>Little Moments</h2>
+
+                        <p class="page-intro">
+                            Every picture has a little story.
+                        </p>
+
+                        <div class="photo-gallery">
+
+                            <div class="photo-placeholder">
+                                <span>＋</span>
+                                <p>Picture 01</p>
+                                <!-- ADD PICTURE 01 HERE -->
+                            </div>
+
+                            <div class="photo-placeholder">
+                                <span>＋</span>
+                                <p>Picture 02</p>
+                                <!-- ADD PICTURE 02 HERE -->
+                            </div>
+
+                            <div class="photo-placeholder">
+                                <span>＋</span>
+                                <p>Picture 03</p>
+                                <!-- ADD PICTURE 03 HERE -->
+                            </div>
+
+                            <div class="photo-placeholder">
+                                <span>＋</span>
+                                <p>Picture 04</p>
+                                <!-- ADD PICTURE 04 HERE -->
+                            </div>
+
+                            <div class="photo-placeholder">
+                                <span>＋</span>
+                                <p>Picture 05</p>
+                                <!-- ADD PICTURE 05 HERE -->
+                            </div>
+
+                        </div>
+
+                        <span class="page-number">04</span>
+                    </div>
+                </div>
+
+                <!-- PAGE 5: PICTURES 6–10 -->
+                <div class="page">
+                    <div class="page-content memories-page">
+
+                        <p class="page-eyebrow">MORE MOMENTS TO TREASURE</p>
+                        <h2>Another Little Chapter</h2>
+
+                        <p class="page-intro">
+                            A few more memories worth keeping.
+                        </p>
+
+                        <div class="photo-gallery">
+
+                            <div class="photo-placeholder">
+                                <span>＋</span>
+                                <p>Picture 06</p>
+                                <!-- ADD PICTURE 06 HERE -->
+                            </div>
+
+                            <div class="photo-placeholder">
+                                <span>＋</span>
+                                <p>Picture 07</p>
+                                <!-- ADD PICTURE 07 HERE -->
+                            </div>
+
+                            <div class="photo-placeholder">
+                                <span>＋</span>
+                                <p>Picture 08</p>
+                                <!-- ADD PICTURE 08 HERE -->
+                            </div>
+
+                            <div class="photo-placeholder">
+                                <span>＋</span>
+                                <p>Picture 09</p>
+                                <!-- ADD PICTURE 09 HERE -->
+                            </div>
+
+                            <div class="photo-placeholder">
+                                <span>＋</span>
+                                <p>Picture 10</p>
+                                <!-- ADD PICTURE 10 HERE -->
+                            </div>
+
+                        </div>
+
+                        <span class="page-number">05</span>
+                    </div>
+                </div>
+
+                <!-- PAGE 6: VIDEOS 1–5 -->
+                <div class="page">
+                    <div class="page-content videos-page">
+
+                        <p class="page-eyebrow">MEMORIES THAT MOVE</p>
+                        <h2>Little Videos</h2>
+
+                        <p class="page-intro">
+                            Some moments deserve to be watched again.
+                        </p>
+
+                        <div class="video-gallery">
+
+                            <div class="video-placeholder">
+                                <span class="play-symbol">▶</span>
+                                <p>Video Memory 01</p>
+                                <!-- ADD VIDEO 01 HERE -->
+                            </div>
+
+                            <div class="video-placeholder">
+                                <span class="play-symbol">▶</span>
+                                <p>Video Memory 02</p>
+                                <!-- ADD VIDEO 02 HERE -->
+                            </div>
+
+                            <div class="video-placeholder">
+                                <span class="play-symbol">▶</span>
+                                <p>Video Memory 03</p>
+                                <!-- ADD VIDEO 03 HERE -->
+                            </div>
+
+                            <div class="video-placeholder">
+                                <span class="play-symbol">▶</span>
+                                <p>Video Memory 04</p>
+                                <!-- ADD VIDEO 04 HERE -->
+                            </div>
+
+                            <div class="video-placeholder">
+                                <span class="play-symbol">▶</span>
+                                <p>Video Memory 05</p>
+                                <!-- ADD VIDEO 05 HERE -->
+                            </div>
+
+                        </div>
+
+                        <span class="page-number">06</span>
+                    </div>
+                </div>
+
+                <!-- PAGE 7: VIDEOS 6–10 -->
+                <div class="page">
+                    <div class="page-content videos-page">
+
+                        <p class="page-eyebrow">LITTLE MOMENTS IN MOTION</p>
+                        <h2>More Memories</h2>
+
+                        <div class="video-gallery">
+
+                            <div class="video-placeholder">
+                                <span class="play-symbol">▶</span>
+                                <p>Video Memory 06</p>
+                                <!-- ADD VIDEO 06 HERE -->
+                            </div>
+
+                            <div class="video-placeholder">
+                                <span class="play-symbol">▶</span>
+                                <p>Video Memory 07</p>
+                                <!-- ADD VIDEO 07 HERE -->
+                            </div>
+
+                            <div class="video-placeholder">
+                                <span class="play-symbol">▶</span>
+                                <p>Video Memory 08</p>
+                                <!-- ADD VIDEO 08 HERE -->
+                            </div>
+
+                            <div class="video-placeholder">
+                                <span class="play-symbol">▶</span>
+                                <p>Video Memory 09</p>
+                                <!-- ADD VIDEO 09 HERE -->
+                            </div>
+
+                            <div class="video-placeholder">
+                                <span class="play-symbol">▶</span>
+                                <p>Video Memory 10</p>
+                                <!-- ADD VIDEO 10 HERE -->
+                            </div>
+
+                        </div>
+
+                        <span class="page-number">07</span>
+                    </div>
+                </div>
+
+                <!-- PAGE 8: VIDEOS 11–15 -->
+                <div class="page">
+                    <div class="page-content videos-page">
+
+                        <p class="page-eyebrow">MOMENTS TO REPLAY</p>
+                        <h2>Captured Moments</h2>
+
+                        <div class="video-gallery">
+
+                            <div class="video-placeholder">
+                                <span class="play-symbol">▶</span>
+                                <p>Video Memory 11</p>
+                                <!-- ADD VIDEO 11 HERE -->
+                            </div>
+
+                            <div class="video-placeholder">
+                                <span class="play-symbol">▶</span>
+                                <p>Video Memory 12</p>
+                                <!-- ADD VIDEO 12 HERE -->
+                            </div>
+
+                            <div class="video-placeholder">
+                                <span class="play-symbol">▶</span>
+                                <p>Video Memory 13</p>
+                                <!-- ADD VIDEO 13 HERE -->
+                            </div>
+
+                            <div class="video-placeholder">
+                                <span class="play-symbol">▶</span>
+                                <p>Video Memory 14</p>
+                                <!-- ADD VIDEO 14 HERE -->
+                            </div>
+
+                            <div class="video-placeholder">
+                                <span class="play-symbol">▶</span>
+                                <p>Video Memory 15</p>
+                                <!-- ADD VIDEO 15 HERE -->
+                            </div>
+
+                        </div>
+
+                        <span class="page-number">08</span>
+                    </div>
+                </div>
+
+                <!-- PAGE 9: VIDEOS 16–20 -->
+                <div class="page">
+                    <div class="page-content videos-page">
+
+                        <p class="page-eyebrow">ONE MORE LOOK</p>
+                        <h2>Unforgettable Moments</h2>
+
+                        <div class="video-gallery">
+
+                            <div class="video-placeholder">
+                                <span class="play-symbol">▶</span>
+                                <p>Video Memory 16</p>
+                                <!-- ADD VIDEO 16 HERE -->
+                            </div>
+
+                            <div class="video-placeholder">
+                                <span class="play-symbol">▶</span>
+                                <p>Video Memory 17</p>
+                                <!-- ADD VIDEO 17 HERE -->
+                            </div>
+
+                            <div class="video-placeholder">
+                                <span class="play-symbol">▶</span>
+                                <p>Video Memory 18</p>
+                                <!-- ADD VIDEO 18 HERE -->
+                            </div>
+
+                            <div class="video-placeholder">
+                                <span class="play-symbol">▶</span>
+                                <p>Video Memory 19</p>
+                                <!-- ADD VIDEO 19 HERE -->
+                            </div>
+
+                            <div class="video-placeholder">
+                                <span class="play-symbol">▶</span>
+                                <p>Video Memory 20</p>
+                                <!-- ADD VIDEO 20 HERE -->
+                            </div>
+
+                        </div>
+
+                        <span class="page-number">09</span>
+                    </div>
+                </div>
+
+                <!-- PAGE 10: VOICE NOTES 1–5 -->
+                <div class="page">
+                    <div class="page-content voice-page">
+
+                        <p class="page-eyebrow">A LITTLE SOMETHING TO HEAR</p>
+                        <h2>Voices & Words</h2>
+
+                        <p class="page-intro">
+                            Little messages worth listening to.
+                        </p>
+
+                        <div class="voice-list">
+
+                            <div class="voice-placeholder">
+                                <span>♫</span>
+                                <p>Voice Note 01</p>
+                                <!-- ADD VOICE NOTE 01 HERE -->
+                            </div>
+
+                            <div class="voice-placeholder">
+                                <span>♫</span>
+                                <p>Voice Note 02</p>
+                                <!-- ADD VOICE NOTE 02 HERE -->
+                            </div>
+
+                            <div class="voice-placeholder">
+                                <span>♫</span>
+                                <p>Voice Note 03</p>
+                                <!-- ADD VOICE NOTE 03 HERE -->
+                            </div>
+
+                            <div class="voice-placeholder">
+                                <span>♫</span>
+                                <p>Voice Note 04</p>
+                                <!-- ADD VOICE NOTE 04 HERE -->
+                            </div>
+
+                            <div class="voice-placeholder">
+                                <span>♫</span>
+                                <p>Voice Note 05</p>
+                                <!-- ADD VOICE NOTE 05 HERE -->
+                            </div>
+
+                        </div>
+
+                        <span class="page-number">10</span>
+                    </div>
+                </div>
+
+                <!-- PAGE 11: VOICE NOTES 6–10 -->
+                <div class="page">
+                    <div class="page-content voice-page">
+
+                        <p class="page-eyebrow">MESSAGES TO KEEP</p>
+                        <h2>Words from the Heart</h2>
+
+                        <div class="voice-list">
+
+                            <div class="voice-placeholder">
+                                <span>♫</span>
+                                <p>Voice Note 06</p>
+                                <!-- ADD VOICE NOTE 06 HERE -->
+                            </div>
+
+                            <div class="voice-placeholder">
+                                <span>♫</span>
+                                <p>Voice Note 07</p>
+                                <!-- ADD VOICE NOTE 07 HERE -->
+                            </div>
+
+                            <div class="voice-placeholder">
+                                <span>♫</span>
+                                <p>Voice Note 08</p>
+                                <!-- ADD VOICE NOTE 08 HERE -->
+                            </div>
+
+                            <div class="voice-placeholder">
+                                <span>♫</span>
+                                <p>Voice Note 09</p>
+                                <!-- ADD VOICE NOTE 09 HERE -->
+                            </div>
+
+                            <div class="voice-placeholder">
+                                <span>♫</span>
+                                <p>Voice Note 10</p>
+                                <!-- ADD VOICE NOTE 10 HERE -->
+                            </div>
+
+                        </div>
+
+                        <span class="page-number">11</span>
+                    </div>
+                </div>
+
+                <!-- PAGE 12: VOICE NOTES 11–15 -->
+                <div class="page">
+                    <div class="page-content voice-page">
+
+                        <p class="page-eyebrow">A FEW MORE LITTLE MESSAGES</p>
+                        <h2>One Last Listen</h2>
+
+                        <div class="voice-list">
+
+                            <div class="voice-placeholder">
+                                <span>♫</span>
+                                <p>Voice Note 11</p>
+                                <!-- ADD VOICE NOTE 11 HERE -->
+                            </div>
+
+                            <div class="voice-placeholder">
+                                <span>♫</span>
+                                <p>Voice Note 12</p>
+                                <!-- ADD VOICE NOTE 12 HERE -->
+                            </div>
+
+                            <div class="voice-placeholder">
+                                <span>♫</span>
+                                <p>Voice Note 13</p>
+                                <!-- ADD VOICE NOTE 13 HERE -->
+                            </div>
+
+                            <div class="voice-placeholder">
+                                <span>♫</span>
+                                <p>Voice Note 14</p>
+                                <!-- ADD VOICE NOTE 14 HERE -->
+                            </div>
+
+                            <div class="voice-placeholder">
+                                <span>♫</span>
+                                <p>Voice Note 15</p>
+                                <!-- ADD VOICE NOTE 15 HERE -->
+                            </div>
+
+                        </div>
+
+                        <span class="page-number">12</span>
+                    </div>
+                </div>
+
+                <!-- PAGE 13: SECRET ENVELOPE -->
+                <div class="page">
+                    <div class="page-content envelope-page">
+
+                        <p class="page-eyebrow">SEALED WITH CARE</p>
+                        <h2>Something Just for You</h2>
+
+                        <p>
+                            There is a little message waiting
+                            inside this envelope.
+                        </p>
+
+                        <div
+                            class="secret-envelope"
+                            id="secret-envelope"
+                            role="button"
+                            tabindex="0"
+                            aria-expanded="false"
+                            aria-controls="secret-letter"
+                        >
+                            <div class="envelope-flap"></div>
+
+                            <div class="envelope-body">
+                                <span>♡</span>
+                                <p>Open Me</p>
+                            </div>
+                        </div>
+
+                        <div class="secret-letter" id="secret-letter" hidden>
+                            <h3>A Little Secret</h3>
+                            <p>
+                                <!-- WRITE YOUR SECRET MESSAGE HERE -->
+                                Add your personal message here.
+                            </p>
+                        </div>
+
+                        <span class="page-number">13</span>
+                    </div>
+                </div>
+
+                <!-- PAGE 14: PERSONAL NOTES -->
+                <div class="page">
+                    <div class="page-content notes-page">
+
+                        <p class="page-eyebrow">WORDS TO KEEP</p>
+                        <h2>A Few Little Notes</h2>
+
+                        <div class="note-paper">
+                            <p>For all the beautiful moments ahead...</p>
+                        </div>
+
+                        <div class="note-paper">
+                            <p>For the laughter we will always remember...</p>
+                        </div>
+
+                        <div class="note-paper">
+                            <p>For the memories still waiting to happen...</p>
+                        </div>
+
+                        <span class="page-number">14</span>
+                    </div>
+                </div>
+
+                <!-- PAGE 15: FINAL MESSAGE -->
+                <div class="page">
+                    <div class="page-content final-page">
+
+                        <span class="page-flower">✿</span>
+
+                        <p class="page-eyebrow">
+                            BEFORE YOU TURN THE LAST PAGE
+                        </p>
+
+                        <h2>Until the Next Memory</h2>
+
+                        <p>
+                            This book may have its last page,
+                            but there are still so many moments
+                            left to experience.
+                        </p>
+
+                        <p>
+                            Keep making memories, discovering
+                            beautiful things and enjoying
+                            every new chapter of your journey.
+                        </p>
+
+                        <div class="page-ornament">✦ ❀ ✦</div>
+
+                        <span class="page-number">15</span>
+                    </div>
+                </div>
+
+                <!-- PAGE 16: CLOSING COVER -->
+                <div class="page page-cover closing-page" data-density="hard">
+                    <div class="page-content closing-content">
+
+                        <span class="page-flower">❀</span>
+
+                        <p class="page-eyebrow">UNTIL NEXT TIME</p>
+                        <h2>A Little Kiss</h2>
+
+                        <div class="page-ornament">♡</div>
+
+                        <p>
+                            Keep this little collection
+                            of memories close.
+                        </p>
+
+                        <p class="closing-signature">
+                            With care,
+                            <br>
+                            <span><!-- ADD YOUR SIGNATURE HERE -->Your Name</span>
+                        </p>
+
+                        <span class="page-number">16</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- BOOK NAVIGATION -->
+        <div class="book-navigation">
+
+            <button id="previous-page" class="page-navigation-button">
+                ← Previous
+            </button>
+
+            <span class="navigation-caption">Turn the page</span>
+
+            <button id="next-page" class="page-navigation-button">
+                Next →
+            </button>
+
+        </div>
+
+        <!-- CONTENTS PANEL -->
+        <aside class="contents-panel" id="contents-panel" hidden>
+
+            <div class="contents-header">
+                <h3>Contents</h3>
+
+                <button id="close-contents" aria-label="Close contents">
+                    ×
+                </button>
+            </div>
+
+            <div id="contents-list"></div>
+
+        </aside>
+
+        <!-- BACKGROUND MUSIC PLAYER -->
+        <div class="music-player" id="music-player">
+
+            <div class="music-information">
+
+                <span class="music-icon">♫</span>
+
+                <div>
+                    <p class="music-label">A LITTLE MUSIC</p>
+                    <p id="song-title">Choose a memory song</p>
+                </div>
+
+            </div>
+
+            <div class="music-controls">
+
+                <button id="previous-song" aria-label="Previous song">
+                    |◀
+                </button>
+
+                <button id="music-toggle" aria-label="Play music">
+                    ▶
+                </button>
+
+                <button id="next-song" aria-label="Next song">
+                    ▶|
+                </button>
+
+            </div>
+
+            <input
+                type="range"
+                id="music-volume"
+                min="0"
+                max="1"
+                step="0.05"
+                value="0.5"
+                aria-label="Music volume"
+            >
+
+            <!-- LOOP REMOVED: MUSIC PLAYER CAN MOVE TO THE NEXT SONG -->
+            <audio id="background-audio"></audio>
+
+        </div>
+
+    </main>
+
+    <!-- PAGE FLIP LIBRARY -->
+    <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
+
+    <!-- WEBSITE JAVASCRIPT -->
+    <script src="js/password.js"></script>
+    <script src="js/book.js"></script>
+    <script src="js/music.js"></script>
+    <script src="js/videos.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
